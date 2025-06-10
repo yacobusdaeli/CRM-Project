@@ -27,7 +27,7 @@
             <div class="flex items-center space-x-4">
                 <!-- Notification Icon -->
                 <div class="flex items-center">
-                    @include('layouts.notification')
+                    @include('layouts.notifications')
                 </div>
 
                 <!-- Shopping Cart -->
@@ -51,10 +51,16 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            {{-- Profile  --}}
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
-
+                            
+                            {{-- Riwayat Belanja --}}
+                            <x-dropdown-link :href="route('riwayat_beli')">
+                                {{ __('Riwayat Belanja') }}
+                            </x-dropdown-link>
+                            
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf

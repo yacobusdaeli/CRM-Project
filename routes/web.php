@@ -32,4 +32,19 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
+// Riwayat Beli
+Route::get('/riwayat_beli', function () {
+    return view('riwayat_beli');
+})->name('riwayat_beli');
+
+// Detail Riwayat Beli
+Route::get('/detail_riwayat', function () {
+    return view('detail_riwayat');
+})->name('detail_riwayat');
+
+// Page Notification
+Route::get('/notifications', function () {
+    return view('notifications');
+})->name('notifications');
+
 require __DIR__ . '/auth.php';
