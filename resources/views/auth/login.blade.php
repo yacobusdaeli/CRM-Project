@@ -114,14 +114,14 @@
                         type="submit" 
                         class="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                     >
-                        {{ __('Log in') }}
+                        {{ __('Login') }}
                     </button>
                 </form>
                 
                 <!-- Register Link (Optional) -->
                 @if (Route::has('register'))
                 <p class="text-center mt-6 text-sm text-gray-600">
-                    Don't have an account? 
+                    Belum mempunyai akun ? 
                     <a href="{{ route('register') }}" class="text-red-600 font-semibold hover:text-red-700">Register</a>
                 </p>
                 @endif

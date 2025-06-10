@@ -7,18 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nyoba', function () {
-    return view('nyoba');
-});
-
-Route::get('/nyoba2', function () {
-    return view('nyoba2');
-});
-
-Route::get('/cek1', function () {
-    return '<h1>Cek 1</h1>';
-})->middleware(['auth', 'verified']);
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -28,5 +16,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Detail Produk
+Route::get('/detail_produk', function () {
+    return view('detail_produk');
+});
+
+// Cart
+Route::get('/cart', function () {
+    return view('cart-page');
+})->name('cart');
+
+// Checkout
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
 
 require __DIR__ . '/auth.php';
